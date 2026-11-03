@@ -1,12 +1,12 @@
 import express from 'express';
 
-import { BookRepository } from './modules/Books/ports/BookRepository';
-import { BookService } from './modules/Books/application/BookService';
-import { createBookRouter } from './modules/Books/adapters/http/bookRoutes';
+import { BookRepository } from './modules/books/ports/BookRepository';
+import { BookService } from './modules/books/application/BookService';
+import { createBookRouter } from './modules/books/adapters/http/bookRoutes';
 import { errorHandler, notFoundHandler } from './shared/httpErrorHandlers';
-import { PrismaBookRepository } from './modules/Books/adapters/persistence/PrismaBookRepository';
+import { PrismaBookRepository } from './modules/books/adapters/persistence/PrismaBookRepository';
 import { createPrismaClient } from './shared/database/prismaClient';
-import { InMemoryBookRepository } from './modules/Books/adapters/persistence/InMemoryBookRepository';
+import { InMemoryBookRepository } from './modules/books/adapters/persistence/InMemoryBookRepository';
 
 const sampleBooks = [
     { id: 1, title: 'Cien años de soledad', author: 'Gabriel García Márquez', isbn: '9780307474728', copies: 3 },

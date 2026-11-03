@@ -9,7 +9,7 @@ describe('parseNewBook', () =>{
     });
 
     it('throws when a required field is missing', () => {
-        expect(() => parseNewBook({title: 'Cien años de soledad', isbn: '9780307474728', copies: 3})).toThrow(DomainError);
+        expect(() => parseNewBook({author: 'Gabriel García Márquez', isbn: '9780307474728', copies: 3})).toThrow(DomainError);
     });
 
     it('throws when copies is not a positive number', () => {
